@@ -55,6 +55,7 @@ class UsersController extends Controller
     # Criação do usuário
     public function save(Request $request)
     {
+
         $exists = User::where('email', '=', $request->email)->first();
         $type = 'success';
 
